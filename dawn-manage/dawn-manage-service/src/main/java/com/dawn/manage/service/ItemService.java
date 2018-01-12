@@ -18,6 +18,9 @@ import com.dawn.manage.mapper.ItemMapper;
 import com.dawn.manage.pojo.Item;
 import com.dawn.manage.pojo.ItemDesc;
 
+/**
+ * @author dawn
+ */
 @Service
 public class ItemService extends BaseService<Item> {
 

@@ -87,7 +87,7 @@ i, cite, em, var, address, dfn {/*斜体*/
 /*头部公共框架*/
 #theme-login-layout .layout-panel-north .layout-body,
 .theme-header-layout
-{ height:46px !important; background:#1d1d1d url(images/logo.png?v=201612011609) left center no-repeat;}
+{ height:46px !important; background:#1d1d1d url(images/logo2.jpg?v=201612011609) left center no-repeat;}
 
 .theme-navigate-unit-name,.theme-navigate-unit-name:hover{ background:none;border:none; /*margin: 0 60px 0 5px;*/}
 .theme-navigate-unit-name .l-btn-text{color: #767676 !important; font-size: 12px;}

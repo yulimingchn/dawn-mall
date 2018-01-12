@@ -12,7 +12,7 @@ public class PropertieService {
     @Value("${IMAGE_BASE_URL}")
     public String IMAGE_BASE_URL;
     
-    @Value("${TAOTAO_WEB_URL}")
-    public String TAOTAO_WEB_URL;
+    @Value("${DAWN_WEB_URL}")
+    public String DAWN_WEB_URL;
 
 }
