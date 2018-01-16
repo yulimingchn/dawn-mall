@@ -17,11 +17,13 @@ import com.dawn.common.service.ApiService;
 import com.dawn.manage.mapper.ItemMapper;
 import com.dawn.manage.pojo.Item;
 import com.dawn.manage.pojo.ItemDesc;
+import org.springframework.transaction.annotation.Transactional;
 
 /**
  * @author dawn
  */
 @Service
+@Transactional(rollbackFor = Exception.class)
 public class ItemService extends BaseService<Item> {
 
     @Autowired
@@ -89,14 +91,6 @@ public class ItemService extends BaseService<Item> {
         itemDesc.setItemId(item.getId());
         this.itemDescService.updateSelective(itemDesc);
 
-//        try {
-//            // 通知其他系统，该商品已经被更新
-//            String url = this.propertieService.TAOTAO_WEB_URL + "/item/cache/" + item.getId() + ".html";
-//            this.apiService.doPost(url);
-//        } catch (Exception e) {
-//            e.printStackTrace();
-//        }
-        
         sendMsg(item.getId(), "update");
     }
     
@@ -108,7 +102,7 @@ public class ItemService extends BaseService<Item> {
             msg.put("date", System.currentTimeMillis());
             
             // 通知其他系统，发送消息
-            this.rabbitTemplate.convertAndSend("item." + type, MAPPER.writeValueAsString(msg));
+           /* this.rabbitTemplate.convertAndSend("item." + type, MAPPER.writeValueAsString(msg));*/
         } catch (Exception e) {
             e.printStackTrace();
         }

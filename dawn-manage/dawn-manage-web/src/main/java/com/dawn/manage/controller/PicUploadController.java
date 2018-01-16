@@ -28,6 +28,7 @@ import com.dawn.manage.service.PropertieService;
 
 /**
  * 图片上传
+ * @author dawn
  */
 @Controller
 @RequestMapping("/pic")
@@ -37,7 +38,7 @@ public class PicUploadController {
 
     private static final ObjectMapper mapper = new ObjectMapper();
 
-    // 允许上传的格式
+    /** 允许上传的格式*/
     private static final String[] IMAGE_TYPE = new String[] { ".bmp", ".jpg", ".jpeg", ".gif", ".png" };
 
     @Autowired
