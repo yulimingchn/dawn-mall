@@ -66,9 +66,9 @@
 <script type="text/javascript">
 	var itemAddEditor ;
 	$(function(){
-		itemAddEditor = TAOTAO.createEditor("#itemAddForm [name=desc]");
+		itemAddEditor = DAWN.createEditor("#itemAddForm [name=desc]");
 		var param = {fun:function(node){
-			TAOTAO.changeItemParam(node, "itemAddForm");
+                DAWN.changeItemParam(node, "itemAddForm");
 		}};
 		TT.init(param);
 	});
