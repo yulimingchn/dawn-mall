@@ -1,14 +1,14 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ page trimDirectiveWhitespaces="true" %>
 <%
-	String staticUrl = "http://static.taotao.com";
+	String staticUrl = "http://static.dawn.com";
 	request.setAttribute("staticUrl", staticUrl);
 %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=gb2312"/>
-    <title>登录淘淘</title>
+    <title>商城登录</title>
     <link type="text/css" rel="stylesheet" href="${staticUrl}/css/login.css"/>
     <script type="text/javascript" src="${staticUrl}/js/jquery-1.2.6.min.js"></script>
     <script type="text/javascript" src="${staticUrl}/js/login/g.base.js"></script>
@@ -48,8 +48,8 @@
 <body>
 <div class="w">
     <div id="logo">
-    	<a href="http://www.taotao.com/" clstag="passport|keycount|login|01">
-    		<img src="${staticUrl}/images/taotao-logo.gif" alt="淘淘" width="170" height="60"/>
+    	<a href="http://www.dawn.com/" clstag="passport|keycount|login|01">
+    		<img src="${staticUrl}/images/dawn-logo.jpg" alt="曙光" width="170" height="60"/>
     	</a><b></b>
    	</div>
 </div>
@@ -145,7 +145,7 @@
             </div>
                 <div class="coagent hide" clstag="passport|keycount|login|07">
                     <label class="ftx24">
-                        使用合作网站账号登录淘淘：
+                        使用合作网站账号登录系统：
                         <span class="clr"></span><input type="hidden" name="KbmPxRtWsz" value="IMdug" />
                     <span class="btns qq"><s></s> <a href="javascript:void(0)"
                                                      onclick="window.location='http://qq.jd.com/new/qq/login.aspx'+window.location.search;return false;">QQ</a></span>
@@ -178,7 +178,7 @@
                 </div>
         </div>
         <div class="free-regist">
-            <span><a href="http://www.taotao.com/user/register.html" clstag="passport|keycount|login|08">免费注册&gt;&gt;</a></span>
+            <span><a href="http://www.dawn.com/user/register.html" clstag="passport|keycount|login|08">免费注册&gt;&gt;</a></span>
         </div>
     </div>
 </form>

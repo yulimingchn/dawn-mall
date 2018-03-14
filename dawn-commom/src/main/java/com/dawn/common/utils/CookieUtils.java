@@ -14,7 +14,7 @@ import org.slf4j.LoggerFactory;
 /**
  * 
  * Cookie 工具类
- *
+ *@author dawn
  */
 public final class CookieUtils {
 
@@ -151,7 +151,8 @@ public final class CookieUtils {
             Cookie cookie = new Cookie(cookieName, cookieValue);
             if (cookieMaxage > 0)
                 cookie.setMaxAge(cookieMaxage);
-            if (null != request)// 设置域名的cookie
+            // 设置域名的cookie
+            if (null != request)
                 cookie.setDomain(getDomainName(request));
             cookie.setPath("/");
             response.addCookie(cookie);
@@ -176,7 +177,8 @@ public final class CookieUtils {
             Cookie cookie = new Cookie(cookieName, cookieValue);
             if (cookieMaxage > 0)
                 cookie.setMaxAge(cookieMaxage);
-            if (null != request)// 设置域名的cookie
+            // 设置域名的cookie
+            if (null != request)
                 cookie.setDomain(getDomainName(request));
             cookie.setPath("/");
             response.addCookie(cookie);

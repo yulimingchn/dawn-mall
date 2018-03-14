@@ -2,14 +2,20 @@ package com.dawn.web.bean;
 
 
 public class OrderItem {
-	
-	private Long itemId;//商品id
-	private String orderId;//订单id
-	private Integer num;//商品购买数量
-	private String title;//商品标题
-	private Long price;//商品单价
-	private Long totalFee;//商品总价
-	private String picPath;//图片路径
+	/**商品id */
+	private Long itemId;
+	/**订单id */
+	private String orderId;
+	/** 商品购买数量*/
+	private Integer num;
+	/**商品标题 */
+	private String title;
+	/**商品单价 */
+	private Long price;
+	/**商品总价 */
+	private Long totalFee;
+	/**图片路径 */
+	private String picPath;
 	
 	public Long getItemId() {
 		return itemId;

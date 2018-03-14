@@ -32,10 +32,12 @@ public class OrderService {
         try {
             String url = DAWN_ORDER_URL + "/order/create";
             HttpResult httpResult = this.apiService.doPostJson(url, MAPPER.writeValueAsString(order));
-            if (httpResult.getCode().intValue() == 200) { // 响应状态码
+            // 响应状态码
+            if (httpResult.getCode().intValue() == 200) {
                 String data = httpResult.getData();
                 JsonNode jsonNode = MAPPER.readTree(data);
-                if (jsonNode.get("status").intValue() == 200) { // 业务状态码
+                // 业务状态码
+                if (jsonNode.get("status").intValue() == 200) {
                     // 订单提交成功
                     return jsonNode.get("data").asText();
                 }

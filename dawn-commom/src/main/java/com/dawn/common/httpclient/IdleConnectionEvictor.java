@@ -2,6 +2,9 @@ package com.dawn.common.httpclient;
 
 import org.apache.http.conn.HttpClientConnectionManager;
 
+/**
+ * @author dawn
+ */
 public class IdleConnectionEvictor extends Thread {
 
     private final HttpClientConnectionManager connMgr;

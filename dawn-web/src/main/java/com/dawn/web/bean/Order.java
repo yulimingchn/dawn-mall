@@ -7,39 +7,57 @@ import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.fasterxml.jackson.databind.deser.std.DateDeserializers.DateDeserializer;
 
 public class Order {
-	private String orderId;//id,rowKye:id+时间戳
-	private String payment;//实付金额
-	private Integer paymentType; //支付类型，1、在线支付，2、货到付款
-	private String postFee;//邮费
+	/**id,rowKye:id+时间戳 */
+	private String orderId;
+	/** 实付金额   */
+	private String payment;
+	/** 支付类型，1、在线支付，2、货到付款   */
+	private Integer paymentType;
+	/**邮费    */
+	private String postFee;
 	/**
 	 * 初始阶段：1、未付款、未发货；初始化所有数据
 	 * 付款阶段：2、已付款；更改付款时间
 	 * 发货阶段：3、已发货；更改发货时间、更新时间、物流名称、物流单号
 	 * 成功阶段：4、已成功；更改更新时间，交易结束时间，买家留言，是否已评价
 	 * 关闭阶段：5、关闭；   更改更新时间，交易关闭时间。
+	 * 状态:1、未付款，2、已付款，3、未发货，4、已发货，5、交易成功，6、交易关闭
 	 * */
-	private Integer status;//状态:1、未付款，2、已付款，3、未发货，4、已发货，5、交易成功，6、交易关闭
+	private Integer status;
+	/**创建时间    */
 	@JsonDeserialize(using = DateDeserializer.class)
-	private Date createTime;//创建时间
+	private Date createTime;
+	/**更新时间    */
 	@JsonDeserialize(using = DateDeserializer.class)
-	private Date updateTime;//更新时间
+	private Date updateTime;
+	/**付款时间    */
 	@JsonDeserialize(using = DateDeserializer.class)
-	private Date paymentTime;//付款时间
+	private Date paymentTime;
+	/**发货时间    */
 	@JsonDeserialize(using = DateDeserializer.class)
-	private Date consignTime;//发货时间
+	private Date consignTime;
+	/**交易结束时间    */
 	@JsonDeserialize(using = DateDeserializer.class)
-	private Date endTime;//交易结束时间
+	private Date endTime;
+	/**交易关闭时间    */
 	@JsonDeserialize(using = DateDeserializer.class)
-	private Date closeTime;//交易关闭时间
-	private String shippingName;//物流名称
-	private String shippingCode;//物流单号
-	private Long userId;//用户id
-	private String buyerMessage;//买家留言
-	private String buyerNick;//买家昵称
-	private Integer buyerRate;//买家是否已经评价
-	private List<OrderItem> orderItems;//商品详情
-	
-	private OrderShipping orderShipping; //物流地址信息
+	private Date closeTime;
+	/**物流名称  */
+	private String shippingName;
+	/**物流单号    */
+	private String shippingCode;
+	/**用户id  */
+	private Long userId;
+	/**买家留言    */
+	private String buyerMessage;
+	/**买家昵称    */
+	private String buyerNick;
+	/** 买家是否已经评价   */
+	private Integer buyerRate;
+	/** 商品详情   */
+	private List<OrderItem> orderItems;
+	/**物流地址信息    */
+	private OrderShipping orderShipping;
 	
 	public Integer getPaymentType() {
 		return paymentType;

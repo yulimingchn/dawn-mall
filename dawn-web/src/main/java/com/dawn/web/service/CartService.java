@@ -19,8 +19,8 @@ public class CartService {
     @Autowired
     private ApiService apiService;
 
-    @Value("${TAOTAO_CART_URL}")
-    private String TAOTAO_CART_URL;
+    @Value("${DAWN_CART_URL}")
+    private String DAWN_CART_URL;
 
     private static final ObjectMapper MAPPER = new ObjectMapper();
 
@@ -28,7 +28,7 @@ public class CartService {
         User user = UserThreadLocal.get();
         // 调用购物车系统提供的接口服务获取数据
         try {
-            String url = TAOTAO_CART_URL + "/service/api/cart/" + user.getId();
+            String url = DAWN_CART_URL + "/service/api/cart/" + user.getId();
             String jsonData = this.apiService.doGet(url);
             if (StringUtils.isNotEmpty(jsonData)) {
                 return MAPPER.readValue(jsonData,

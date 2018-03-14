@@ -6,10 +6,15 @@ import org.springframework.stereotype.Service;
 import redis.clients.jedis.ShardedJedis;
 import redis.clients.jedis.ShardedJedisPool;
 
+/**
+ * @author dawn
+ */
 @Service
 public class RedisService {
 
-    @Autowired(required = false) //如果运行的容器中有该对象，就注入，没有，忽略
+
+    @Autowired(required = false)
+    /**如果运行的容器中有该对象，就注入，没有，忽略*/
     private ShardedJedisPool shardedJedisPool;
 
     private <T> T execute(Function<T, ShardedJedis> fun) {

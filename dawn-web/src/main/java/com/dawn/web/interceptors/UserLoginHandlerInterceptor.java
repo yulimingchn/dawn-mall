@@ -12,9 +12,13 @@ import org.springframework.web.servlet.ModelAndView;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+/**
+ * @author dawn
+ * 用户登录拦截器
+ */
 public class UserLoginHandlerInterceptor implements HandlerInterceptor {
 
-    public static final String COOKIE_NAME = "TT_TOKEN";
+    public static final String COOKIE_NAME = "D_TOKEN";
 
     @Autowired
     private UserService userService;
@@ -23,7 +27,7 @@ public class UserLoginHandlerInterceptor implements HandlerInterceptor {
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler)
             throws Exception {
         String token = CookieUtils.getCookieValue(request, COOKIE_NAME);
-        String loginUrl = this.userService.TAOTAO_SSO_URL + "/user/login.html";
+        String loginUrl = this.userService.DAWN_SSO_URL + "/user/login.html";
         if (StringUtils.isEmpty(token)) {
             // 未登录状态
             response.sendRedirect(loginUrl);
@@ -35,7 +39,8 @@ public class UserLoginHandlerInterceptor implements HandlerInterceptor {
             response.sendRedirect(loginUrl);
             return false;
         }
-        UserThreadLocal.set(user); // 将对象放入到本地线程中
+        // 将对象放入到本地线程中
+        UserThreadLocal.set(user);
         return true;
     }
 

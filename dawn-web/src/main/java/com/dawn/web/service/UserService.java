@@ -15,14 +15,14 @@ public class UserService {
     @Autowired
     private ApiService apiService;
 
-    @Value("${TAOTAO_SSO_URL}")
-    public String TAOTAO_SSO_URL;
+    @Value("${DAWN_SSO_URL}")
+    public String DAWN_SSO_URL;
 
     private static final ObjectMapper MAPPER = new ObjectMapper();
 
     public User queryUserByToken(String token) {
         try {
-            String url = TAOTAO_SSO_URL + "/service/user/" + token;
+            String url = DAWN_SSO_URL + "/service/user/" + token;
             String jsonData = this.apiService.doGet(url);
             if (StringUtils.isNotEmpty(jsonData)) {
                 return MAPPER.readValue(jsonData, User.class);

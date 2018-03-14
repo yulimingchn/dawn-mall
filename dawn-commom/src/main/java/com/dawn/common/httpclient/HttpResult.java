@@ -1,5 +1,8 @@
 package com.dawn.common.httpclient;
 
+/**
+ * @author dawn
+ */
 public class HttpResult {
     
     private Integer code;

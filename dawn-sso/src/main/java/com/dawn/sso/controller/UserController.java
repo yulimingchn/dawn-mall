@@ -33,7 +33,7 @@ public class UserController {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(UserController.class);
 
-    public static final String COOKIE_NAME = "TT_TOKEN";
+    public static final String COOKIE_NAME = "D_TOKEN";
 
     @Autowired
     private UserService userService;

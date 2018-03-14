@@ -121,6 +121,7 @@
 		   statusCode : {
 			   201 : function(){
 				   $.messager.alert('提示','新增商品成功!');
+				   clearForm();
 			   },
 			   400 : function(){
 				   $.messager.alert('提示','参数有误!');

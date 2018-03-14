@@ -11,6 +11,10 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import com.dawn.common.service.RedisService;
 import com.dawn.web.service.ItemService;
 
+/**
+ * @author dawn
+ * 商品缓存控制层
+ */
 @RequestMapping("item/cache")
 @Controller
 public class ItemCacheController {

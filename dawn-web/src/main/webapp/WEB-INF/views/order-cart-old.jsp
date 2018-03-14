@@ -20,7 +20,7 @@
 	<script type="text/javascript" src="/js/jquery.checkout.js"></script>
 	<script type="text/javascript" src="/js/base-v1.js"></script>
 	<script type="text/javascript" src="/js/order.common.js"></script>
-	<script type="text/javascript" src="/js/taotao.js" charset="utf-8"></script>
+	<script type="text/javascript" src="/js/dawn.js" charset="utf-8"></script>
 </head>
 <body id="mainframe">
 <!--shortcut start-->

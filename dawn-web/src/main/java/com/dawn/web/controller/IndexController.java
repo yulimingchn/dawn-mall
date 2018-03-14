@@ -8,6 +8,10 @@ import org.springframework.web.servlet.ModelAndView;
 
 import com.dawn.web.service.IndexService;
 
+/**
+ * @author  dawn
+ * 首页控制层
+ */
 @RequestMapping
 @Controller
 public class IndexController {

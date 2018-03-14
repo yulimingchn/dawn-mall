@@ -383,7 +383,7 @@ $("#loginsubmit").click(function () {
                 if (result) {
                     var obj = eval(result);
                     if (obj.status == 200) {
-                    	obj.success = "http://www.taotao.com/";
+                    	obj.success = "http://www.dawn.com/";
                         var isIE = !-[1,];
                         if (isIE) {
                             var link = document.createElement("a");

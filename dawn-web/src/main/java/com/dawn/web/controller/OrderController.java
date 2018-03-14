@@ -22,6 +22,10 @@ import com.dawn.web.service.CartService;
 import com.dawn.web.service.ItemService;
 import com.dawn.web.service.OrderService;
 
+/**
+ * @author  dawn
+ * 订单控制层
+ */
 @RequestMapping("order")
 @Controller
 public class OrderController {
@@ -51,8 +55,7 @@ public class OrderController {
     
     /**
      *  基于购物车的订单确认页
-     *  
-     * @param itemId
+     *
      * @return
      */
     @RequestMapping(value = "create", method = RequestMethod.GET)
@@ -67,7 +70,6 @@ public class OrderController {
      * 提交订单
      * 
      * @param order
-     * @param token
      * @return
      */
     @RequestMapping(value = "submit", method = RequestMethod.POST)
@@ -77,7 +79,8 @@ public class OrderController {
 
         String orderId = this.orderService.submitOrder(order);
         if (StringUtils.isEmpty(orderId)) {
-            result.put("status", 300); // 订单提交失败
+            // 订单提交失败
+            result.put("status", 300);
         } else {
             // 订单提交成功
             result.put("status", 200);

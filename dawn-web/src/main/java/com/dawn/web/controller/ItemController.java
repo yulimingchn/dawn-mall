@@ -11,6 +11,10 @@ import com.dawn.manage.pojo.ItemDesc;
 import com.dawn.web.bean.Item;
 import com.dawn.web.service.ItemService;
 
+/**
+ * @author  dawn
+ * 商品控制层
+ */
 @RequestMapping("item")
 @Controller
 public class ItemController {

@@ -80,7 +80,7 @@ function addToFavorite() {
 <div class="w" id="logo">
     <div>
     	<a href="http://www.taotao.com/">
-    		<img src="/images/taotao-logo.gif" alt="京东商城" width="170" height="60"/>
+    		<img src="/images/dawn-logo.gif" alt="京东商城" width="170" height="60"/>
     	</a> <b></b>
     </div>
 </div>

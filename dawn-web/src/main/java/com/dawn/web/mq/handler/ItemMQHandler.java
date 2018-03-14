@@ -7,6 +7,9 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.dawn.common.service.RedisService;
 import com.dawn.web.service.ItemService;
 
+/**
+ * 商品消息队列处理器
+ */
 public class ItemMQHandler {
 
     private static final ObjectMapper MAPPER = new ObjectMapper();
