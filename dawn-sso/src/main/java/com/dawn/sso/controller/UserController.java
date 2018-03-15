@@ -27,6 +27,9 @@ import com.dawn.common.utils.CookieUtils;
 import com.dawn.sso.pojo.User;
 import com.dawn.sso.service.UserService;
 
+/**
+ * @author  dawn
+ */
 @RequestMapping("user")
 @Controller
 public class UserController {

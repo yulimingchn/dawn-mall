@@ -6,7 +6,7 @@
 <!--shortcut end-->
 <div id="o-header-2013">
 	<div class="w" id="header-2013">
-		<div id="logo-2013" class="ld"><a href="http://www.taotao.com/" hidefocus="true" clstag="homepage|keycount|home2013|02a"><b></b><img src="/images/taotao-logo.gif" width="270" height="60" alt="淘淘"></a></div>
+		<div id="logo-2013" class="ld"><a href="http://www.dawn.com/" hidefocus="true" clstag="homepage|keycount|home2013|02a"><b></b><img src="/images/dawn-logo.jpg" width="270" height="60" alt="曙光"></a></div>
 		<!--logo end-->
 		<div id="search-2013">
 			<div class="i-search ld">
@@ -22,7 +22,7 @@
 		<!--search end-->
 		<div id="my360buy-2013">
 			<dl>
-				<dt class="ld"><s></s><a href="http://home.jd.com/" clstag="homepage|keycount|home2012|04a">我的淘淘</a><b></b></dt>
+				<dt class="ld"><s></s><a href="http://home.jd.com/" clstag="homepage|keycount|home2012|04a">我的商城</a><b></b></dt>
 				<dd>
 					<div class="loading-style1"><b></b>加载中，请稍候...</div>
 				</dd>
@@ -31,7 +31,7 @@
 		<!--my360buy end-->
 		<div id="settleup-2013" clstag="homepage|keycount|home2013|05a">
 			<dl>
-				<dt class="ld"><s></s><span class="shopping"><span id="shopping-amount"></span></span><a href="http://www.taotao.com/cart.html" id="settleup-url">去购物车结算</a> <b></b> </dt>
+				<dt class="ld"><s></s><span class="shopping"><span id="shopping-amount"></span></span><a href="http://www.dawn.com/cart.html" id="settleup-url">去购物车结算</a> <b></b> </dt>
 <!-- 				<dd>
 					<div class="prompt">
 						<div class="loading-style1"><b></b>加载中，请稍候...</div>
