@@ -14,7 +14,7 @@
 	<rabbit:admin connection-factory="connectionFactory"/>	
 	
 	<!-- 定义队列 -->
-	<rabbit:queue name="DAWN-WEB-ITEM-QUEUE" auto-declare="true" durable="true"/>
+	<rabbit:queue name="DAWN-WEB-ITEM-QUEUE" auto-declare="true"/>
 	
 	<!-- 定义消费者 -->
 	<bean id="itemMQHandler" class="com.dawn.web.mq.handler.ItemMQHandler"></bean>

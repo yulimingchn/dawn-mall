@@ -74,7 +74,8 @@ public class ItemService extends BaseService<Item> {
     public EasyUIResult queryItemList(Integer page, Integer rows) {
         PageHelper.startPage(page, rows);
         Example example = new Example(Item.class);
-        example.setOrderByClause("updated DESC");// 按照更新时间倒序排序
+        // 按照更新时间倒序排序
+        example.setOrderByClause("updated DESC");
         List<Item> list = this.itemMapper.selectByExample(example);
         PageInfo<Item> pageInfo = new PageInfo<Item>(list);
         return new EasyUIResult(pageInfo.getTotal(), pageInfo.getList());
@@ -102,7 +103,7 @@ public class ItemService extends BaseService<Item> {
             msg.put("date", System.currentTimeMillis());
             
             // 通知其他系统，发送消息
-           /* this.rabbitTemplate.convertAndSend("item." + type, MAPPER.writeValueAsString(msg));*/
+            this.rabbitTemplate.convertAndSend("item." + type, MAPPER.writeValueAsString(msg));
         } catch (Exception e) {
             e.printStackTrace();
         }

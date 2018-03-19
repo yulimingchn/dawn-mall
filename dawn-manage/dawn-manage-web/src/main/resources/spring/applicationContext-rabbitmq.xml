@@ -14,7 +14,7 @@
 	<rabbit:admin connection-factory="connectionFactory"/>	
 	
 	<!-- 定义交换机 -->
-	<rabbit:topic-exchange name="DAWN-ITEM-EXCHANGE" auto-declare="true" durable="true" />
+	<rabbit:topic-exchange name="DAWN-ITEM-EXCHANGE" auto-declare="true"  />
 	
 	<!-- 定义模板 -->
 	<rabbit:template id="rabbitTemplate" connection-factory="connectionFactory" exchange="DAWN-ITEM-EXCHANGE"/>

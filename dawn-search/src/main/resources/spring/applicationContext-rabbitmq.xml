@@ -14,14 +14,14 @@
 	<rabbit:admin connection-factory="connectionFactory"/>	
 	
 	<!-- 定义队列 -->
-	<rabbit:queue name="TAOTAO-SEARCH-ITEM-QUEUE" auto-declare="true" durable="true"/>
+	<rabbit:queue name="DAWN-SEARCH-ITEM-QUEUE" auto-declare="true"/>
 	
 	<!-- 定义消费者 -->
 	<bean id="itemMQHandler" class="com.dawn.search.mq.handler.ItemMQHandler"></bean>
 	
 	<!-- 定义监听 -->
 	<rabbit:listener-container connection-factory="connectionFactory">
-		<rabbit:listener ref="itemMQHandler" method="execute" queue-names="TAOTAO-SEARCH-ITEM-QUEUE"/>
+		<rabbit:listener ref="itemMQHandler" method="execute" queue-names="DAWN-SEARCH-ITEM-QUEUE"/>
 	</rabbit:listener-container>
 	
 </beans>
