@@ -3,7 +3,7 @@
 	xmlns="http://java.sun.com/xml/ns/javaee"
 	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
 	id="WebApp_ID" version="2.5">
-	<display-name>taotao-cart</display-name>
+	<display-name>dawn-cart</display-name>
 
 	<context-param>
 		<param-name>contextConfigLocation</param-name>
@@ -31,7 +31,7 @@
 
 	<!-- 配置SpringMVC框架入口 -->
 	<servlet>
-		<servlet-name>taotao-cart</servlet-name>
+		<servlet-name>dawn-cart</servlet-name>
 		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
 		<init-param>
 			<param-name>contextConfigLocation</param-name>
@@ -41,11 +41,11 @@
 	</servlet>
 
 	<servlet-mapping>
-		<servlet-name>taotao-cart</servlet-name>
+		<servlet-name>dawn-cart</servlet-name>
 		<url-pattern>*.html</url-pattern>
 	</servlet-mapping>
 	<servlet-mapping>
-		<servlet-name>taotao-cart</servlet-name>
+		<servlet-name>dawn-cart</servlet-name>
 		<url-pattern>/service/*</url-pattern>
 	</servlet-mapping>
 
